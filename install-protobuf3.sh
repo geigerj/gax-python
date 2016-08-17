@@ -19,4 +19,6 @@ command -v protoc || {
 # ensure protoc is up-to-date in our cache
 echo "Upgrading brew packages"
 brew update
+brew update
+brew doctor
 brew upgrade
