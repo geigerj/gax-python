@@ -5,7 +5,7 @@ env:
 # Protobuf is very expensive to install, so we cache it between builds
 before_install:
   - pip install --upgrade pip
-  - ./install-protobuf3.sh
+  - alias protoc="python -m grpc.tools.protoc"
 cache:
   directories:
     - $BREW_HOME
