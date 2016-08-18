@@ -4,7 +4,6 @@ sudo: false
 before_install:
   - pip install --upgrade pip
   - pip --version
-  - alias protoc="python -m grpc.tools.protoc"
 
 language: python
 python:
