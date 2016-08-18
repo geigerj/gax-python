@@ -1,6 +1,4 @@
 sudo: false
-env:
-  - BREW_HOME=$HOME/.linuxbrew PATH=$BREW_HOME/bin:$PATH
 
 # Protobuf is very expensive to install, so we cache it between builds
 before_install:
