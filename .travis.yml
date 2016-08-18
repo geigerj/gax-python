@@ -5,6 +5,7 @@ env:
 # Protobuf is very expensive to install, so we cache it between builds
 before_install:
   - pip install --upgrade pip
+  - pip --version
   - alias protoc="python -m grpc.tools.protoc"
 cache:
   directories:
