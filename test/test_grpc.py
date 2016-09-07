@@ -54,7 +54,7 @@ class TestCreateStub(unittest2.TestCase):
             self, auth, chan, chan_creds, comp):
         got_channel = grpc.create_stub(
             _fake_create_stub, self.FAKE_SERVICE_PATH, self.FAKE_PORT)
-        chan_creds.assert_called_once_with(None, None, None)
+        chan_creds.assert_called_once_with()
         chan.assert_called_once_with(
             '{}:{}'.format(self.FAKE_SERVICE_PATH, self.FAKE_PORT),
             comp.return_value)
@@ -71,7 +71,7 @@ class TestCreateStub(unittest2.TestCase):
         grpc.create_stub(
             _fake_create_stub, self.FAKE_SERVICE_PATH, self.FAKE_PORT,
             scopes=fake_scopes)
-        chan_creds.assert_called_once_with(None, None, None)
+        chan_creds.assert_called_once_with()
         chan.assert_called_once_with(
             '{}:{}'.format(self.FAKE_SERVICE_PATH, self.FAKE_PORT),
             comp.return_value)

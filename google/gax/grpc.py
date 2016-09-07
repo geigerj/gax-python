@@ -108,7 +108,7 @@ def create_stub(generated_create_stub, service_path, port, ssl_creds=None,
     """
     if channel is None:
         if ssl_creds is None:
-            ssl_creds = grpc.ssl_channel_credentials(None, None, None)
+            ssl_creds = grpc.ssl_channel_credentials()
         if metadata_transformer is None:
             if scopes is None:
                 scopes = []
