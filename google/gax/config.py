@@ -49,7 +49,7 @@ the client constants configuration for retrying into the correct gRPC objects.
 """
 
 
-NAME_STATUS_CODES = dict([(v, k) for (k, v) in STATUS_CODE_NAMES.items()])
+NAME_STATUS_CODES = grpc.NAME_STATUS_CODES
 """Inverse map for STATUS_CODE_NAMES"""
 
 
