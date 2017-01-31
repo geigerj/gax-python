@@ -43,7 +43,7 @@ from google.gax.errors import GaxError
 from google.gax.retry import retryable
 
 
-__version__ = '0.15.1'
+__version__ = '0.15.3'
 
 
 _LOG = logging.getLogger(__name__)
